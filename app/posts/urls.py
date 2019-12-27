@@ -11,5 +11,15 @@ urlpatterns = [
         route='',
         view=views.HomeView.as_view(),
         name='home'
-    )
+    ),
+    path(
+        route='blog/<str:slug>',
+        view=views.PostView.as_view(),
+        name='post_detail'
+    ),
+    path(
+        route='blog/tag/<str:slug>',
+        view=views.TagView.as_view(),
+        name='tag'
+    ),
 ]
