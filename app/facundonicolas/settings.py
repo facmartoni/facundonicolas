@@ -41,7 +41,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'bootstrap4',
-    'livereload',
+    # 'livereload',
 ]
 
 OWN_APPS = [
@@ -61,7 +61,7 @@ DJANGO_MIDDLEWARE = [
 ]
 
 THIRD_PARTY_MIDDLEWARE = [
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
 ]
 
 OWN_MIDDLEWARE = [
