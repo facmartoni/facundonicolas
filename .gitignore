@@ -1,3 +1,17 @@
+# Assets
+
 assets/
+
+# Design
+
 design.xd
+components_example.xd
+
+# Workspace
+
 facundonicolas.code-workspace
+
+# App
+
+app/venv/
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block head_content %}
+        <title>Facundo Nicolas</title>
+    {% endblock head_content %}
+
+    {# Bootstrap #}
+    {% load bootstrap4 %}
+
+    {# CSS Bootstrap #}
+    {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+        {% block container %}
+            <button class="btn btn-primary">A VER BOTSTRPAsss</button>
+        {% endblock container %}
+    </div>
+
+    {# JS y jQuery Bootstrap #}
+	{% bootstrap_javascript jquery='full' %}
+</body>
+</html>
