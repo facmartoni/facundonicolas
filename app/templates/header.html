@@ -1,0 +1,69 @@
+{# Static load #}
+{% load static %}
+
+<header class="black-bg-color d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="{% url 'posts:home' %}">
+            <img class="header__logo" src="{% static 'img/logo.png' %}" alt="Logo">
+        </a>
+        <div class="menu_button" id="menu_button">
+            <div class="line white-bg-color"></div>
+            <div class="line white-bg-color"></div>
+            <div class="line white-bg-color"></div>
+            <div class="line white-bg-color"></div>
+        </div>
+        <nav class="nav-big">
+            <a href="{% url 'posts:home' %}" class="nav-big-item light-text-color">
+                <h4 class="nav-item-text">Blog</h4>
+            </a>
+            <a href="" class="nav-big-item light-text-color">
+                <h4 class="nav-big-item-text">Sobre mí</h4>
+            </a>
+            <a href="" class="nav-big-item light-text-color">
+                <h4 class="nav-big-item-text">Portafolio</h4>
+            </a>
+            <a href="" class="nav-big-item light-text-color">
+                <h4 class="nav-big-item-text">Habilidades</h4>
+            </a>
+            <a href="" class="nav-big-item light-text-color">
+                <h4 class="nav-big-item-text">Contáctame</h4>
+            </a>
+        </nav>
+    </div>
+</header>
+
+<nav class="black-bg-color nav" id='nav'>
+    <div class="container h-100 d-flex flex-column justify-content-around align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <a href="{% url 'posts:home' %}" class="nav-item light-text-color">
+                <h4 class="nav-item-text">Blog</h4>
+            </a>
+            <a href="" class="nav-item light-text-color">
+                <h4 class="nav-item-text">Sobre mí</h4>
+            </a>
+            <a href="" class="nav-item light-text-color">
+                <h4 class="nav-item-text">Portafolio</h4>
+            </a>
+            <a href="" class="nav-item light-text-color">
+                <h4 class="nav-item-text">Habilidades</h4>
+            </a>
+            <a href="" class="nav-item light-text-color">
+                <h4 class="nav-item-text">Contáctame</h4>
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/facmartoni" class="menu-icon" target="_blank">
+                <i class="fab fa-twitter light-text-color"></i>
+            </a>
+            <a href="http://instagram.com/facmartoni" class="menu-icon" target="_blank">
+                <i class="fab fa-instagram light-text-color"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/facundo-garcia-martoni/" class="menu-icon" target="_blank">
+                <i class="fab fa-linkedin light-text-color"></i>
+            </a>
+            <a href="https://github.com/facmartoni" class="menu-icon" target="_blank">
+                <i class="fab fa-github light-text-color"></i>
+            </a>
+        </div>
+    </div>
+</nav>

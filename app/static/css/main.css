@@ -1,0 +1,90 @@
+:root {
+  /* Colors */
+
+  --white-color: #f1f1f1;
+  --black-color: #000000;
+  --light-text-color: #ffffff;
+  --dark-text-color: #292a2c;
+  --action-color: #1b0357;
+  --positive-color: #8a7d59;
+  --negative-color: #801823;
+}
+
+/* Font colors */
+
+.white-color {
+  color: var(--white-color) !important;
+}
+
+.black-color {
+  color: var(--black-color) !important;
+}
+
+.light-text-color {
+  color: var(--light-text-color) !important;
+}
+
+.dark-text-color {
+  color: var(--dark-text-color) !important;
+}
+
+.action-color {
+  color: var(--action-color) !important;
+}
+
+.positive-color {
+  color: var(--positive-color) !important;
+}
+
+.negative-color {
+  color: var(--negative-color) !important;
+}
+
+/* Background colors */
+
+.white-bg-color {
+  background-color: var(--white-color) !important;
+}
+
+.black-bg-color {
+  background-color: var(--black-color) !important;
+}
+
+.light-bg-text-color {
+  background-color: var(--light-text-color) !important;
+}
+
+.dark-bg-text-color {
+  background-color: var(--dark-text-color) !important;
+}
+
+.action-bg-color {
+  background-color: var(--action-color) !important;
+}
+
+.positive-bg-color {
+  background-color: var(--positive-color) !important;
+}
+
+.negative-bg-color {
+  background-color: var(--negative-color) !important;
+}
+
+/* Fonts */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+  margin: 0;
+}
+
+p,
+a,
+span,
+small {
+  font-family: "Cantarell", sans-serif;
+}
