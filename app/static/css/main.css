@@ -87,4 +87,17 @@ a,
 span,
 small {
   font-family: "Cantarell", sans-serif;
+  margin: 0;
+}
+
+/* Font sizes */
+
+h1 {
+  font-size: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 }

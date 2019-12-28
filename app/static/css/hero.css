@@ -5,3 +5,13 @@
 .hero__bitmoji {
   width: 256px;
 }
+
+.typed-cursor {
+  font-size: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__bitmoji {
+    width: 320px;
+  }
+}

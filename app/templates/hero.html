@@ -1,9 +1,20 @@
 {# Static load #}
 {% load static %}
 
-<section class="hero dark-bg-text-color container-fluid d-flex justify-content-center align-items-center">
-     <div class="row">ass</div>
-     <div class="row align-self-end no-gutters">
+<section class="hero dark-bg-text-color container-fluid d-flex justify-content-center align-items-center flex-wrap">
+     <div class="row align-self-start align-self-sm-center no-gutters pt-4 text-center">
+        <div class="col white-color">
+            <div id="typed-strings">
+                <h1>¡Hola! Soy Facundo y soy Desarrollador Frontend</h1>
+                <h1>¡Hola! Soy Facundo y soy Desarrollador Backend</h1>
+                <h1>¡Hola! Soy Facundo y soy Diseñador Interactivo</h1>
+                <h1>¡Hola! Soy Facundo y soy Programador</h1>
+                <h1>¡Hola! Soy Facundo y soy Powerlifter</h1>
+            </div>
+            <h1 id="typed" class="text-center d-inline w-100"></h1>
+        </div>
+     </div>
+     <div class="row align-self-end no-gutters w-100 text-center">
         <div class="col white-color">
             {% with 'img/bitmojis/bm'|add:random_number|add:'.png' as hero_bitmoji %}
                 <img class="hero__bitmoji" src="{% static hero_bitmoji %}" alt="Yo">

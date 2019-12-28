@@ -6,9 +6,15 @@
 {% block head_content %}
     <title>Facundo Nicolas</title>
 
+    {# My CSS #}
     <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+
+    {# Typed.js #}
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 {% endblock head_content %}
 
 {% block container %}
     {% include 'hero.html' %}
+
+    <script src="{% static 'js/hero.js' %}"></script>
 {% endblock container %}
