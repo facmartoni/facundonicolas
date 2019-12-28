@@ -61,7 +61,7 @@ DJANGO_MIDDLEWARE = [
 ]
 
 THIRD_PARTY_MIDDLEWARE = [
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
 ]
 
 OWN_MIDDLEWARE = [

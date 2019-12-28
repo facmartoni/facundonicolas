@@ -42,10 +42,8 @@
 <body>
     {% include 'header.html' %}
 
-    <div class="container">
-        {% block container %}
-        {% endblock container %}
-    </div>
+    {% block container %}
+    {% endblock container %}
 
     {# JS y jQuery Bootstrap #}
 	{% bootstrap_javascript jquery='full' %}

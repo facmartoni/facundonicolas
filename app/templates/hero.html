@@ -1,0 +1,13 @@
+{# Static load #}
+{% load static %}
+
+<section class="hero dark-bg-text-color container-fluid d-flex justify-content-center align-items-center">
+     <div class="row">ass</div>
+     <div class="row align-self-end no-gutters">
+        <div class="col white-color">
+            {% with 'img/bitmojis/bm'|add:random_number|add:'.png' as hero_bitmoji %}
+                <img class="hero__bitmoji" src="{% static hero_bitmoji %}" alt="Yo">
+            {% endwith %}
+        </div>
+     </div>
+</section>

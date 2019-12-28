@@ -1,1 +1,14 @@
 {% extends 'base.html' %}
+
+{# Static load #}
+{% load static %}
+
+{% block head_content %}
+    <title>Facundo Nicolas</title>
+
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+{% endblock head_content %}
+
+{% block container %}
+    {% include 'hero.html' %}
+{% endblock container %}
