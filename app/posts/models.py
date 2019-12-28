@@ -46,3 +46,17 @@ class Tag(models.Model):
 
     def get_absolute_url(self):
         return reverse("posts:tag", kwargs={"slug": self.slug})
+
+
+class Subscriber(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Nombre')
+    email = models.EmailField(max_length=200, unique=True)
+    active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = 'Suscriptor'
+        verbose_name_plural = 'Suscriptores'

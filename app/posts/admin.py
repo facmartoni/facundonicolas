@@ -4,7 +4,7 @@ from django.contrib import admin
 
 # Own
 
-from posts.models import Post, Tag
+from posts.models import Post, Tag, Subscriber
 
 
 @admin.register(Post)
@@ -44,6 +44,19 @@ class TagAdmin(admin.ModelAdmin):
         ('Tag', {
             "fields": (
                 ('name', 'slug'),
+            ),
+        }),
+    )
+
+
+@admin.register(Subscriber)
+class SubscriberAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'created', 'active')
+    search_fields = ('name', 'email')
+    fieldsets = (
+        ('Subscriber', {
+            "fields": (
+                ('name', 'email', 'active'),
             ),
         }),
     )
