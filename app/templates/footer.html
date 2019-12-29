@@ -1,0 +1,58 @@
+{# Static load #}
+{% load static %}
+
+<footer class="container-fluid d-flex flex-column black-bg-color py-4 pt-md-5">
+    <div class="row d-flex flex-column align-items-center mb-5 mb-xl-n4">
+        <h5 class="footer__cta light-text-color" id="footer-cta">¡Suscríbete a mi blog!</h5>
+        <form action="" class="d-flex flex-column align-items-center flex-md-row align-items-md-center">
+            {% csrf_token %}
+
+            <input 
+                type="text"
+                placeholder="NOMBRE"
+                class="footer__input white-bg-color"
+                required
+            >
+
+            <input 
+                type="email"
+                placeholder="EMAIL"
+                class="footer__input white-bg-color"
+                required
+            >
+
+            <button type="submit" class="d-block footer__button black-bg-color light-text-color fill">
+                Suscribirse
+            </button>
+        </form>
+    </div>
+    <div class="row d-none d-xl-flex justify-content-xl-end no-gutters">
+        <img class="footer__bitmoji d-none d-xl-flex" src="{% static 'img/bitmojis/bm_lentes.png' %}" alt="Emoji con lentes">
+    </div>
+    <div class="row mb-4 mb-md-5 d-flex justify-content-center no-gutters">
+        <div class="footer__div white-bg-color"></div>
+    </div>
+    <div class="row d-flex flex-column flex-md-row align-items-md-center justify-content-md-start">
+        <div class="col-md-4 d-none d-md-flex justify-content-center">
+            <a href="{% url 'posts:home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="footer__logo">
+            </a>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0 align-self-md-end">
+            <small class="light-text-color">© Facundo García Martoni - {{ year }}</small>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center align-self-md-end">
+            <a href="https://twitter.com/facmartoni" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
+                <i class="fab fa-twitter light-text-color footer__twitter-icon"></i>
+            </a>
+            <a href="http://instagram.com/facmartoni" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
+                <i class="fab fa-instagram light-text-color footer__instagram-icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/facundo-garcia-martoni/" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
+                <i class="fab fa-linkedin light-text-color footer__linkedin-icon"></i>
+            </a>
+            <a href="https://github.com/facmartoni" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
+                <i class="fab fa-github light-text-color footer__github-icon"></i>
+        </div>
+    </div>
+</footer>

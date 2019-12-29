@@ -8,6 +8,17 @@
   --action-color: #1b0357;
   --positive-color: #8a7d59;
   --negative-color: #801823;
+  --twitter-color: #00acee;
+  --instagram-color: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  --linkedin-color: #0e76a8;
+  --github-color: #6cc644;
 }
 
 /* Font colors */
@@ -96,8 +107,16 @@ h1 {
   font-size: 36px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h1 {
     font-size: 40px;
   }
+}
+
+/* Miscellaneus */
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--white-color);
+  color: var(--black-color) !important;
 }

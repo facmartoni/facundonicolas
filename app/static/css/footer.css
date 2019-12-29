@@ -1,0 +1,102 @@
+footer {
+  height: 448px;
+}
+
+.footer__button,
+.footer__input {
+  font-family: "Fjalla One", sans-serif;
+  width: 192px;
+  height: 48px;
+}
+
+.footer__button {
+  text-transform: uppercase;
+  border: 1px solid var(--white-color);
+  transition: 0.3s;
+}
+
+.footer__cta {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.footer__input {
+  margin-bottom: 16px;
+  padding: 0 16px;
+  border: none;
+}
+
+.footer__div {
+  height: 1px;
+  width: 80vw;
+}
+
+.footer__social-icon {
+  font-size: 24px;
+  margin-right: 24px;
+}
+
+.footer__social-icon:last-child {
+  margin-right: 0;
+}
+
+.footer__social-icon:hover {
+  text-decoration: none;
+}
+
+.footer__twitter-icon,
+.footer__instagram-icon,
+.footer__linkedin-icon,
+.footer__github-icon {
+  transition: 0.2s;
+}
+
+.footer__twitter-icon:hover {
+  color: var(--twitter-color) !important;
+}
+
+.footer__instagram-icon:hover {
+  background-image: var(--instagram-color) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer__linkedin-icon:hover {
+  color: var(--linkedin-color) !important;
+}
+
+.footer__github-icon:hover {
+  color: var(--github-color) !important;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    /* height: 400px; */
+  }
+
+  .footer__input {
+    margin: 0;
+    margin-right: 16px;
+    margin-bottom: 32px;
+  }
+
+  .footer__button {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .footer__cta {
+    margin-bottom: 64px;
+  }
+
+  .footer__logo {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__bitmoji {
+    width: 86px;
+    margin-right: 128px;
+  }
+}
