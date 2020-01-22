@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_content %}
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    {% block head_title %}{% endblock %}
+{% endblock %}
+
+{% block container %}
+    <div class="container-fluid info__container d-flex flex-column align-items-center justify-content-center py-5 white-bg-color">
+        <div class="row mb-4">
+            <div class="col">
+                {% block bitmoji %}
+                {% endblock bitmoji %}
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <h2>
+                    {% block title %}
+                    {% endblock title %}
+                </h2>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h5>
+                    {% block message %}
+                    {% endblock message %}
+                </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% block button %}
+                    <a class="d-flex align-items-center justify-content-center main__button white-bg-color action-color fill_up"
+                       href="{% url 'posts:home' %}"
+                    >
+                        Ir al blog
+                    </a>
+                {% endblock button %}
+            </div>
+        </div>
+    </div>
+{% endblock container %}

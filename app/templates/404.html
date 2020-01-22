@@ -1,0 +1,21 @@
+{% extends 'info.html' %}
+
+{% load static %}
+
+{% block head_title %}
+    <title>404</title>
+{% endblock head_title %}
+
+{% block bitmoji %}
+    {% with 'img/bitmojis/404_'|add:random_number|add:'.png' as 404_bitmoji %}
+        <img class="info__bitmoji" src="{% static 404_bitmoji %}" alt="404">
+    {% endwith %}
+{% endblock bitmoji %}
+
+{% block title %}
+    ¡Aquí no hay nada!
+{% endblock title %}
+
+{% block message %}
+    ¿Estabas buscando un post? 👇🏼
+{% endblock message %}

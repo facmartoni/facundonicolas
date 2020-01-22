@@ -1,5 +1,5 @@
 footer {
-  height: 448px;
+  height: auto;
 }
 
 .footer__button,
@@ -9,10 +9,18 @@ footer {
   height: 48px;
 }
 
+.footer__form-feedback {
+  width: 192px;
+  height: auto;
+  line-height: 1em;
+  margin-bottom: 8px;
+}
+
 .footer__button {
   text-transform: uppercase;
   border: 1px solid var(--white-color);
   transition: 0.3s;
+  margin-top: 8px;
 }
 
 .footer__cta {
@@ -21,7 +29,7 @@ footer {
 }
 
 .footer__input {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding: 0 16px;
   border: none;
 }
@@ -62,6 +70,9 @@ footer {
 }
 
 .footer__linkedin-icon:hover {
+  background-image: url("/static/img/linkedin-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--linkedin-color) !important;
 }
 
@@ -70,18 +81,15 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  footer {
-    /* height: 400px; */
-  }
-
   .footer__input {
     margin: 0;
     margin-right: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
   }
 
   .footer__button {
     margin: 0;
+    margin-top: 0;
     margin-bottom: 32px;
   }
 

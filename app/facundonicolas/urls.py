@@ -17,9 +17,15 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+
+# Own
+
+from facundonicolas import views as main_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(('posts.urls', 'posts'), namespace="posts"))
+    path('', include(('posts.urls', 'posts'), namespace="posts")),
+    path('wip', main_views.wip, name='wip'),
+    re_path(r'^.*$', main_views.not_found),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

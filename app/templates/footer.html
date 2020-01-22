@@ -4,22 +4,48 @@
 <footer class="container-fluid d-flex flex-column black-bg-color py-4 pt-md-5">
     <div class="row d-flex flex-column align-items-center mb-5 mb-xl-n4">
         <h5 class="footer__cta light-text-color" id="footer-cta">¡Suscríbete a mi blog!</h5>
-        <form action="" class="d-flex flex-column align-items-center flex-md-row align-items-md-center">
+        <form 
+            action="" 
+            class="d-flex flex-column align-items-center flex-md-row align-items-md-start"
+            method="POST"
+        >
             {% csrf_token %}
 
-            <input 
-                type="text"
-                placeholder="NOMBRE"
-                class="footer__input white-bg-color"
-                required
-            >
+            <div>
+                <input 
+                    type="text"
+                    placeholder="NOMBRE"
+                    class="footer__input white-bg-color"
+                    name="name"
+                    value="{% if form.errors %}{{ form.name.value }}{% endif %}"
+                    required
+                >
+                <div class="footer__form-feedback">
+                    {% for error in form.name.errors %}
+                        <small class="negative-color">
+                            {{ error }}
+                        </small>
+                    {% endfor %}
+                </div>
+            </div>
 
-            <input 
-                type="email"
-                placeholder="EMAIL"
-                class="footer__input white-bg-color"
-                required
-            >
+            <div>
+                <input 
+                    type="email"
+                    placeholder="EMAIL"
+                    class="footer__input white-bg-color"
+                    name="email"
+                    value="{% if form.errors %}{{ form.email.value }}{% endif %}"
+                    required
+                >
+                <div class="footer__form-feedback">
+                    {% for error in form.email.errors %}
+                        <small class="negative-color">
+                            {{ error }}
+                        </small>
+                    {% endfor %}
+                </div>
+            </div>
 
             <button type="submit" class="d-block footer__button black-bg-color light-text-color fill">
                 Suscribirse
@@ -49,7 +75,9 @@
                 <i class="fab fa-instagram light-text-color footer__instagram-icon"></i>
             </a>
             <a href="https://www.linkedin.com/in/facundo-garcia-martoni/" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
-                <i class="fab fa-linkedin light-text-color footer__linkedin-icon"></i>
+                <i class="fab fa-linkedin light-text-color footer__linkedin-icon">
+                    {% comment %} <div class="footer__linkedin-icon-background"></div> {% endcomment %}
+                </i>
             </a>
             <a href="https://github.com/facmartoni" class="footer__social-icon d-md-flex align-items-md-end" target="_blank">
                 <i class="fab fa-github light-text-color footer__github-icon"></i>

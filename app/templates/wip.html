@@ -1,0 +1,20 @@
+{% extends 'info.html' %}
+
+{% load static %}
+
+{% block head_title %}
+    <title>Trabajando 👷🏼‍♂️</title>
+{% endblock head_title %}
+
+{% block bitmoji %}
+    <img class="info__bitmoji" src="{% static 'img/bitmojis/barra.png' %}" alt="Trabajando">
+{% endblock bitmoji %}
+
+{% block title %}
+    Estoy trabajando 
+    <br>en esto 💪🏼
+{% endblock title %}
+
+{% block message %}
+    (vuelve en unos días)
+{% endblock message %}

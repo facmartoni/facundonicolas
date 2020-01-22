@@ -6,6 +6,7 @@
   --light-text-color: #ffffff;
   --dark-text-color: #292a2c;
   --action-color: #1b0357;
+  --light-action-color: #5d2fcf;
   --positive-color: #8a7d59;
   --negative-color: #801823;
   --twitter-color: #00acee;
@@ -18,7 +19,7 @@
     #285aeb 90%
   );
   --linkedin-color: #0e76a8;
-  --github-color: #6cc644;
+  --github-color: #333;
 }
 
 /* Font colors */
@@ -107,10 +108,41 @@ h1 {
   font-size: 36px;
 }
 
+h2 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: 40px;
   }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+/* Button */
+
+.main__button {
+  font-family: "Fjalla One", sans-serif;
+  width: 192px;
+  height: 48px;
+  text-transform: uppercase;
+  border: 1px solid var(--action-color);
+  transition: 0.3s;
+}
+
+.main__button:hover {
+  text-decoration: none;
 }
 
 /* Miscellaneus */
@@ -119,4 +151,10 @@ h1 {
 .fill:focus {
   box-shadow: inset 0 0 0 2em var(--white-color);
   color: var(--black-color) !important;
+}
+
+.fill_up:hover,
+.fill_up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--action-color);
+  color: var(--light-text-color) !important;
 }

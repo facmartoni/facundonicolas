@@ -93,6 +93,10 @@ header {
   left: 0;
 }
 
+.nav-big-item-action:after {
+  background-color: var(--light-action-color) !important;
+}
+
 /* Underline animation style end*/
 
 .nav-big-item-text {
