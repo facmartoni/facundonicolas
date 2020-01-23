@@ -51,8 +51,8 @@ class TagAdmin(admin.ModelAdmin):
 
 @admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'created', 'active')
-    search_fields = ('name', 'email')
+    list_display = ('name', 'email', 'created', 'active', 'ipv4')
+    search_fields = ('name', 'email', 'ipv4')
     fieldsets = (
         ('Subscriber', {
             "fields": (

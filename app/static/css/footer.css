@@ -73,6 +73,7 @@ footer {
   background-image: url("/static/img/linkedin-background.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 18px;
   color: var(--linkedin-color) !important;
 }
 

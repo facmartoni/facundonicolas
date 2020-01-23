@@ -52,6 +52,7 @@ class Subscriber(models.Model):
     name = models.CharField(max_length=50, verbose_name='Nombre')
     email = models.EmailField(max_length=200, unique=True)
     active = models.BooleanField(default=True)
+    ipv4 = models.CharField(max_length=15, verbose_name='IP')
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
