@@ -50,7 +50,7 @@ def wip(request):
         form = SubscriberForm()
     context["form"] = form
 
-    return render(request, 'wip.html', context)
+    return render(request, 'views/wip.html', context)
 
 
 def not_found(request):
@@ -84,4 +84,4 @@ def not_found(request):
         form = SubscriberForm()
     context["form"] = form
 
-    return render(request, '404.html', context)
+    return render(request, 'views/404.html', context)

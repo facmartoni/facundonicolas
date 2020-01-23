@@ -17,7 +17,7 @@ from ipware import get_client_ip
 # Own
 
 from posts.forms import SubscriberForm
-from posts.models import Subscriber
+from posts.models import Subscriber, Post
 
 """The number of registers allowed per IP"""
 NUMBER_OF_IPS_ALLOWED = 20
@@ -55,7 +55,12 @@ def home_view(request):
         form = SubscriberForm()
     context["form"] = form
 
-    return render(request, 'home.html', context)
+    # Posts
+
+    posts = Post.objects.all().order_by('-pub_date')
+    context["posts"] = posts
+
+    return render(request, 'views/home.html', context)
 
 
 def confirmation_view(request):
@@ -85,4 +90,4 @@ def confirmation_view(request):
         form = SubscriberForm()
     context["form"] = form
 
-    return render(request, 'confirmation.html', context)
+    return render(request, 'views/confirmation.html', context)

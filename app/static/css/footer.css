@@ -109,3 +109,9 @@ footer {
     margin-right: 128px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .footer__bitmoji {
+    margin-right: 256px;
+  }
+}

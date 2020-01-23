@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {% block head_content %}
-        <title>Facundo Nicolas</title>
+        <title>Facundo Nicolás</title>
     {% endblock head_content %}
 
     {# Static load #}
@@ -40,13 +40,13 @@
     {# Fonts #}
     <link href="https://fonts.googleapis.com/css?family=Cantarell:400,400i,700,700i|Fjalla+One&display=swap" rel="stylesheet">
 </head>
-<body>
-    {% include 'header.html' %}
+<body class="white-bg-color">
+    {% include 'components/header.html' %}
 
     {% block container %}
     {% endblock container %}
 
-    {% include 'footer.html' %}
+    {% include 'components/footer.html' %}
 
     {# JS y jQuery Bootstrap #}
 	{% bootstrap_javascript jquery='full' %}

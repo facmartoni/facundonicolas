@@ -1,0 +1,18 @@
+<div class="col-12 col-md-6 col-lg-4 mb-5 mx-lg-4 d-flex flex-column align-items-center article_preview__container">
+    <div class="card article_preview__card {{card_bg}}">
+        <img src="{{cover_src}}" class="card-img-top article_preview__img" alt="{{post_title}}">
+        <div class="card-body text-center {{card_txt_color}}">
+            <h4 class="card-title mb-4">{{post_title}}</h4>
+            <p class="card-text mb-4 article_preview__summary">{{post_summary|truncatechars:255}}</p>
+            <small>
+                {% for tag in post_tags %}
+                    {% if forloop.last %}
+                        {{tag}}
+                    {% else %}
+                        {{tag}} -
+                    {% endif %}
+                {% endfor %}
+            </small>
+        </div>
+    </div>
+</div>

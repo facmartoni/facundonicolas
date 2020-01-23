@@ -1,0 +1,33 @@
+.article_preview__card {
+  border-radius: 0 !important;
+  /* border: 1px solid var(--black-color) !important; */
+  border: none !important;
+  width: 300px !important;
+  transition: 0.3s;
+}
+
+.article_preview__card:hover {
+  transform: perspective(700px) rotateX(20deg);
+}
+
+.article_preview__img {
+  border-radius: 0 !important;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article_preview__summary {
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 768px) {
+  .article_preview__card {
+    width: 350px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .article_preview__container:last-child {
+    margin-bottom: 0 !important;
+  }
+}

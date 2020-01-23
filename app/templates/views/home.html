@@ -1,0 +1,46 @@
+{% extends 'views/base.html' %}
+
+{# Static load #}
+{% load static %}
+
+{% block head_content %}
+    <title>Facundo Nicolas</title>
+
+    {# My CSS #}
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+    <link rel="stylesheet" href="{% static 'css/article_preview.css' %}">
+    <link rel="stylesheet" href="{% static 'css/featured_article_preview.css' %}">
+
+    {# Typed.js #}
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+{% endblock head_content %}
+
+{% block container %}
+    {% include 'components/hero.html' %}
+
+    {# Articles #}
+
+    <div class="container-fluid my-5 d-flex flex-column align-items-center">
+
+        {% include 'components/featured_article_preview.html' with cover_src=posts.0.cover.url cover_alt=posts.0.title post_title=posts.0.title post_tags=posts.0.tags.all %}
+
+        <div class="row w-100 d-flex justify-content-center">
+            {% comment %} <div class="card-deck"> {% endcomment %}
+                {% for post in posts|slice:"1:" %}
+                    {# Changes the color of the article card while the loop advances #}
+
+                    {% if forloop.counter|divisibleby:"3" %}
+                        {% include 'components/article_preview.html' with card_bg="dark-bg-text-color" card_txt_color="light-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                    {% elif forloop.counter|divisibleby:"2" %}
+                        {% include 'components/article_preview.html' with card_bg="black-bg-color" card_txt_color="light-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                    {% else %}
+                        {% include 'components/article_preview.html' with card_bg="light-bg-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                    {% endif %}
+                {% endfor %}
+            {% comment %} </div> {% endcomment %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/hero.js' %}"></script>
+    <script src="{% static 'js/featured_article_preview.js' %}"></script>
+{% endblock container %}

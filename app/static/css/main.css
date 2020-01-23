@@ -109,11 +109,31 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
 }
 
 h5 {
   font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -122,11 +142,17 @@ h5 {
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   h5 {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 54px;
   }
 }
 
@@ -167,4 +193,37 @@ h5 {
 
 input {
   border-radius: 0px !important;
+}
+
+/* Card columnns count */
+
+/* @media screen and (min-width: 320px) {
+  .card-deck {
+    column-count: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-deck {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-deck {
+    column-count: 3;
+  }
+} */
+
+/* Card deck iphone bug solution */
+
+.card-deck {
+  display: inline-block !important;
+}
+
+@media screen and (min-width: 768px) {
+  .card-deck {
+    display: flex;
+    justify-content: space-around;
+  }
 }
