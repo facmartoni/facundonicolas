@@ -10,16 +10,27 @@ const $featuredArticleBody = document.getElementById(
   "featured_article_preview__body"
 );
 
-$featuredArticleContainer.addEventListener("mouseover", () => {
-  $featuredArticleOverlay.classList.add(
-    "featured_article_preview__big-overlay"
-  );
-  $featuredArticleBody.classList.add("featured_article_preview__big-text");
-});
+const largeScreenSize = window.matchMedia("(min-width: 992px)");
 
-$featuredArticleContainer.addEventListener("mouseout", () => {
-  $featuredArticleOverlay.classList.remove(
-    "featured_article_preview__big-overlay"
-  );
-  $featuredArticleBody.classList.remove("featured_article_preview__big-text");
-});
+const ScreenSizeFunction = size => {
+  if (size.matches) {
+    $featuredArticleContainer.addEventListener("mouseover", () => {
+      $featuredArticleOverlay.classList.add(
+        "featured_article_preview__big-overlay"
+      );
+      $featuredArticleBody.classList.add("featured_article_preview__big-text");
+    });
+
+    $featuredArticleContainer.addEventListener("mouseout", () => {
+      $featuredArticleOverlay.classList.remove(
+        "featured_article_preview__big-overlay"
+      );
+      $featuredArticleBody.classList.remove(
+        "featured_article_preview__big-text"
+      );
+    });
+  }
+};
+
+ScreenSizeFunction(largeScreenSize);
+largeScreenSize.addListener(ScreenSizeFunction);

@@ -91,3 +91,11 @@ def confirmation_view(request):
     context["form"] = form
 
     return render(request, 'views/confirmation.html', context)
+
+
+def post_detail(request, slug):
+    pass
+
+
+def tag_detail(request, slug):
+    pass

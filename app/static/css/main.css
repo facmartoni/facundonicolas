@@ -131,8 +131,16 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+
   h2 {
     font-size: 36px;
+  }
+
+  h4 {
+    font-size: 26px;
   }
 }
 
@@ -173,57 +181,22 @@ p {
 
 /* Miscellaneus */
 
-.fill:hover,
-.fill:focus {
-  box-shadow: inset 0 0 0 2em var(--white-color);
-  color: var(--black-color) !important;
+@media screen and (min-width: 992px) {
+  .fill:hover,
+  .fill:focus {
+    box-shadow: inset 0 0 0 2em var(--white-color);
+    color: var(--black-color) !important;
+  }
+
+  .fill_action:hover,
+  .fill_action:focus {
+    box-shadow: inset 0 0 0 2em var(--action-color);
+    color: var(--white-color) !important;
+  }
 }
 
-/* .fill_up:hover,
-.fill_up:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--action-color);
-  color: var(--light-text-color) !important;
-} */
-
-.fill_action:hover,
-.fill_action:focus {
-  box-shadow: inset 0 0 0 2em var(--action-color);
-  color: var(--white-color) !important;
-}
+/* Iphone input bug 👇🏼 */
 
 input {
   border-radius: 0px !important;
-}
-
-/* Card columnns count */
-
-/* @media screen and (min-width: 320px) {
-  .card-deck {
-    column-count: 1;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .card-deck {
-    column-count: 2;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card-deck {
-    column-count: 3;
-  }
-} */
-
-/* Card deck iphone bug solution */
-
-.card-deck {
-  display: inline-block !important;
-}
-
-@media screen and (min-width: 768px) {
-  .card-deck {
-    display: flex;
-    justify-content: space-around;
-  }
 }

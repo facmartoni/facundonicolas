@@ -1,18 +1,20 @@
-<div class="featured_article_preview__container mb-5" id="featured_article_preview__container">
-    <div class="featured_article_preview__overlay" id="featured_article_preview__overlay"></div>
-    <img src="{{cover_src}}" class="featured_article_preview__img" alt="{{cover_alt}}">
-    <div class="featured_article_preview__body light-text-color w-100 text-center mb-4 px-2 px-sm-5" id="featured_article_preview__body">
-        <div class="featured_article_preview__tags mb-2">
-            <small>
-                {% for tag in post_tags %}
-                    {% if forloop.last %}
-                        {{tag}}
-                    {% else %}
-                        {{tag}} -
-                    {% endif %}
-                {% endfor %}
-            </small>
+<a href="{% url 'posts:post_detail' post_slug %}" class="mb-5">
+    <div class="featured_article_preview__container" id="featured_article_preview__container">
+        <div class="featured_article_preview__overlay" id="featured_article_preview__overlay"></div>
+        <img src="{{cover_src}}" class="featured_article_preview__img" alt="{{cover_alt}}">
+        <div class="featured_article_preview__body light-text-color w-100 text-center mb-4 px-2 px-sm-5" id="featured_article_preview__body">
+            <div class="featured_article_preview__tags mb-2">
+                <small>
+                    {% for tag in post_tags %}
+                        {% if forloop.last %}
+                            {{tag}}
+                        {% else %}
+                            {{tag}} -
+                        {% endif %}
+                    {% endfor %}
+                </small>
+            </div>
+            <h2>{{post_title}}</h2>
         </div>
-        <h2>{{post_title}}</h2>
     </div>
-</div>
+</a>
