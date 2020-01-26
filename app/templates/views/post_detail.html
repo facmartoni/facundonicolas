@@ -1,0 +1,17 @@
+{% extends 'views/base.html' %}
+
+{# Enables markdown #}
+
+{% load markdown_deux_tags %}
+
+{% block head_content %}
+    <title>{{post.title}}</title>
+{% endblock head_content %}
+
+{% block container %}
+    {{"<small>Hola! **Esto** es iCarly</small>" | markdown:"trusted"}}
+    <h1>
+        {{test | markdown:"trusted" }}
+    </h1>
+    <p>Hola! Esto es tutu</p>
+{% endblock container %}

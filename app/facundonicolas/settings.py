@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+# Django Markdown Deux
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -43,6 +45,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'bootstrap4',
     'livereload',
+    'markdown_deux',
 ]
 
 OWN_APPS = [
@@ -158,3 +161,22 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Django Markdown Deux
+
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": {
+            "code-friendly": None,
+        },
+        "safe_mode": "escape",
+    },
+    "trusted": {
+        "extras": {
+            "code-friendly": None,
+        },
+        # Allow raw HTML (WARNING: don't use this for user-generated
+        # Markdown for your site!).
+        "safe_mode": False,
+    }
+}
