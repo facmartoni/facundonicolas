@@ -5,14 +5,17 @@ app/media/
 
 # Design
 
-design.xd
-components_example.xd
+*.xd
 
 # Workspace
 
-facundonicolas.code-workspace
+*.code-workspace
 
 # App
 
 app/venv/
+
+# Cache
+
+__pycache__/
 
