@@ -46,7 +46,7 @@ def home_view(request):
             ip, is_routable = get_client_ip(request)
             if ip:
                 qty_ips = len(Subscriber.objects.filter(ipv4=ip))
-                if qty_ips <= NUMBER_OF_IPS_ALLOWED:
+                if qty_ips < NUMBER_OF_IPS_ALLOWED:
                     form.instance.ipv4 = ip
                     form.save()
 
@@ -81,7 +81,7 @@ def confirmation_view(request):
             ip, is_routable = get_client_ip(request)
             if ip:
                 qty_ips = len(Subscriber.objects.filter(ipv4=ip))
-                if qty_ips <= NUMBER_OF_IPS_ALLOWED:
+                if qty_ips < NUMBER_OF_IPS_ALLOWED:
                     form.instance.ipv4 = ip
                     form.save()
 
@@ -112,7 +112,7 @@ def post_detail(request, slug):
             ip, is_routable = get_client_ip(request)
             if ip:
                 qty_ips = len(Subscriber.objects.filter(ipv4=ip))
-                if qty_ips <= NUMBER_OF_IPS_ALLOWED:
+                if qty_ips < NUMBER_OF_IPS_ALLOWED:
                     form.instance.ipv4 = ip
                     form.save()
 
@@ -125,8 +125,8 @@ def post_detail(request, slug):
     context['post'] = post
 
     # Only for debug
-    test = 'Hola! **Esto** es una *prueba* de [markdown 😎](http://daringfireball.net/projects/markdown/)'
-    context['test'] = test
+    # test = 'Hola! **Esto** es una *prueba* de [markdown 😎](http://daringfireball.net/projects/markdown/)'
+    # context['test'] = test
 
     return render(request, 'views/post_detail.html', context)
 

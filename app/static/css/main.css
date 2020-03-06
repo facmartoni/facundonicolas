@@ -112,6 +112,10 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  font-size: 22px;
+}
+
 h4 {
   font-size: 22px;
 }
@@ -128,6 +132,10 @@ p {
   h2 {
     font-size: 30px;
   }
+
+  h3 {
+    font-size: 26px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -137,6 +145,10 @@ p {
 
   h2 {
     font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
   }
 
   h4 {
@@ -153,6 +165,10 @@ p {
     font-size: 50px;
   }
 
+  h3 {
+    font-size: 44px;
+  }
+
   h5 {
     font-size: 20px;
   }
@@ -162,6 +178,26 @@ p {
   h2 {
     font-size: 54px;
   }
+
+  h3 {
+    font-size: 48px;
+  }
+}
+
+/* Link color */
+
+a {
+  color: var(--light-action-color);
+}
+
+a:hover {
+  color: var(--light-action-color);
+}
+
+/* Paragraph lines separation */
+
+p {
+  line-height: 1.4;
 }
 
 /* Button */

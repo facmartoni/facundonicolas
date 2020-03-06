@@ -30,11 +30,11 @@
                     {# Changes the color of the article card while the loop advances #}
 
                     {% if forloop.counter|divisibleby:"3" %}
-                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="dark-bg-text-color" card_txt_color="light-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="dark-bg-text-color" card_txt_color="light-text-color" cover_src=post.cover.url post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
                     {% elif forloop.counter|divisibleby:"2" %}
-                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="black-bg-color" card_txt_color="light-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="black-bg-color" card_txt_color="light-text-color" cover_src=post.cover.url post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
                     {% else %}
-                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="light-bg-text-color" cover_src=post.cover.url cover_alt=post.title post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
+                        {% include 'components/article_preview.html' with post_slug=post.slug card_bg="light-bg-text-color" cover_src=post.cover.url post_title=post.title post_summary=post.summary post_tags=post.tags.all %}
                     {% endif %}
                 {% endfor %}
             {% comment %} </div> {% endcomment %}

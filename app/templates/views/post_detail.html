@@ -1,17 +1,42 @@
 {% extends 'views/base.html' %}
 
-{# Enables markdown #}
+{# Static load #}
+{% load static %}
 
+{# Enables markdown #}
 {% load markdown_deux_tags %}
 
 {% block head_content %}
     <title>{{post.title}}</title>
+
+    {# My CSS #}
+    <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+
 {% endblock head_content %}
 
 {% block container %}
-    {{"<small>Hola! **Esto** es iCarly</small>" | markdown:"trusted"}}
+
+    <div class="container d-flex flex-column align-items-center">
+        <div class="row text-center mt-5 mb-3 px-2">
+            <h2>{{ post.title }}</h2>       
+        </div>
+        <div class="row text-center mb-5">
+            <small>Publicado el {{ post.pub_date|date:'d/m/Y' }}</small>
+        </div>
+        <div class="row text-center mb-5 px-4">
+            <p>{{ post.summary }}</p>
+        </div>
+        <div class="row mb-5">
+            <div class="separator"></div>
+        </div>
+        <div class="row px-4 mb-5">
+            {{ post.body | markdown:"trusted" }}
+        </div>
+    </div>
+
+    {% comment %} {{"<small>Hola! **Esto** es iCarly</small>" | markdown:"trusted"}}
     <h1>
         {{test | markdown:"trusted" }}
     </h1>
-    <p>Hola! Esto es tutu</p>
+    <p>Hola! Esto es tutu</p> {% endcomment %}
 {% endblock container %}

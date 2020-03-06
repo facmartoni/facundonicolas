@@ -41,7 +41,7 @@ def wip(request):
             ip, is_routable = get_client_ip(request)
             if ip:
                 qty_ips = len(Subscriber.objects.filter(ipv4=ip))
-                if qty_ips <= NUMBER_OF_IPS_ALLOWED:
+                if qty_ips < NUMBER_OF_IPS_ALLOWED:
                     form.instance.ipv4 = ip
                     form.save()
 
@@ -75,7 +75,7 @@ def not_found(request):
             ip, is_routable = get_client_ip(request)
             if ip:
                 qty_ips = len(Subscriber.objects.filter(ipv4=ip))
-                if qty_ips <= NUMBER_OF_IPS_ALLOWED:
+                if qty_ips < NUMBER_OF_IPS_ALLOWED:
                     form.instance.ipv4 = ip
                     form.save()
 

@@ -1,7 +1,3 @@
-# Python
-
-import re
-
 # Django
 
 from django import forms
