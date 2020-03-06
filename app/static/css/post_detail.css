@@ -1,5 +1,25 @@
-.separator {
+.separator,
+.mini_separator {
   height: 2px;
-  width: 85vw;
   background: #adadad;
+}
+
+.separator {
+  width: 85vw;
+}
+
+.mini_separator {
+  width: 128px;
+}
+
+.most_viewed_posts_container {
+  width: 256px;
+}
+
+.most_viewed_post {
+  color: var(--dark-text-color);
+}
+
+.most_viewed_post:hover {
+  color: var(--dark-text-color);
 }

@@ -124,6 +124,10 @@ h5 {
   font-size: 16px;
 }
 
+h6 {
+  font-size: 18px;
+}
+
 p {
   font-size: 16px;
 }
@@ -228,6 +232,11 @@ p {
   .fill_action:focus {
     box-shadow: inset 0 0 0 2em var(--action-color);
     color: var(--white-color) !important;
+  }
+
+  .slide:hover,
+  .slide:focus {
+    box-shadow: inset 10em 0 0 0 var(--black-color);
   }
 }
 

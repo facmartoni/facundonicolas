@@ -11,27 +11,70 @@
 
     {# My CSS #}
     <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tag.css' %}">
+    <link rel="stylesheet" href="{% static 'css/author_sign.css' %}">
 
 {% endblock head_content %}
 
 {% block container %}
 
     <div class="container d-flex flex-column align-items-center">
-        <div class="row text-center mt-5 mb-3 px-2">
-            <h2>{{ post.title }}</h2>       
-        </div>
-        <div class="row text-center mb-5">
-            <small>Publicado el {{ post.pub_date|date:'d/m/Y' }}</small>
-        </div>
-        <div class="row text-center mb-5 px-4">
-            <p>{{ post.summary }}</p>
-        </div>
+
+        <article class="d-flex flex-column align-items-center">
+            <div class="row text-center mt-5 mb-3 px-2">
+                <h2>{{ post.title }}</h2>       
+            </div>
+
+            <div class="row text-center mb-5">
+                <small>Publicado el {{ post.pub_date|date:'d/m/Y' }}</small>
+            </div>
+
+            <div class="row text-center mb-5 px-4">
+                <p>{{ post.summary }}</p>
+            </div>
+
+            <div class="row mb-5">
+                <div class="separator"></div>
+            </div>
+
+            <div class="row px-4 mb-5">
+                {{ post.body | markdown:"trusted" }}
+            </div>
+
+            <div class="row px-2 mb-5 d-flex justify-content-start w-100">
+                {% for tag in post.tags.all %}
+                    {% include 'components/tag.html' with name=tag.name url=tag.get_absolute_url %}
+                {% endfor %}
+            </div>        
+        </article>
+
+
         <div class="row mb-5">
             <div class="separator"></div>
         </div>
-        <div class="row px-4 mb-5">
-            {{ post.body | markdown:"trusted" }}
+
+        <div class="row mb-5">
+            {% include 'components/author_sign.html' %}
         </div>
+
+        <div class="row mb-5">
+            <div class="separator"></div>
+        </div>
+
+        <div class="row mb-5 d-flex flex-column align-items-center">
+            <h3 class="mb-2">Más Leídos</h3>
+            <div class="mini_separator mb-4"></div>
+            <div class="most_viewed_posts_container d-flex flex-column align-items-center text-center">
+                {% for post in most_viewed_posts %}
+                    <small class="mb-2">{{ forloop.counter }}. <a class="most_viewed_post" href={{ post.get_absolute_url }}>{{ post.title }}</a></small>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="separator"></div>
+        </div>
+
     </div>
 
     {% comment %} {{"<small>Hola! **Esto** es iCarly</small>" | markdown:"trusted"}}

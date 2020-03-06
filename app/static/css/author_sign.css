@@ -1,0 +1,9 @@
+.profile_picture_container {
+  width: 96px;
+  height: 96px;
+}
+
+.profile_picture {
+  width: 100%;
+  border-radius: 50%;
+}

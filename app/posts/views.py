@@ -122,7 +122,12 @@ def post_detail(request, slug):
     context["form"] = form
 
     post = Post.objects.get(slug=slug)
+    post.views += 1
+    post.save()
     context['post'] = post
+
+    most_viewed_posts = Post.objects.all().order_by('-views')[:5]
+    context['most_viewed_posts'] = most_viewed_posts
 
     # Only for debug
     # test = 'Hola! **Esto** es una *prueba* de [markdown 😎](http://daringfireball.net/projects/markdown/)'
@@ -132,4 +137,4 @@ def post_detail(request, slug):
 
 
 def tag_detail(request, slug):
-    pass
+    return redirect('wip')
