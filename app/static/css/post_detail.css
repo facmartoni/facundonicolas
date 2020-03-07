@@ -1,11 +1,12 @@
 .separator,
 .mini_separator {
-  height: 2px;
+  height: 1px;
   background: #adadad;
 }
 
 .separator {
   width: 85vw;
+  max-width: 478px;
 }
 
 .mini_separator {
@@ -21,5 +22,43 @@
 }
 
 .most_viewed_post:hover {
-  color: var(--dark-text-color);
+  color: var(--light-action-color);
+}
+
+.bitmoji-looking {
+  width: 128px;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .post_title {
+    font-size: 42px;
+  }
+
+  .post_summary {
+    font-size: 20px;
+  }
+
+  .most_viewed_post {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .post_title {
+    font-size: 56px;
+  }
+
+  .post_summary {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .post_title {
+    font-size: 64px;
+  }
 }

@@ -41,6 +41,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cantarell:400,400i,700,700i|Fjalla+One&display=swap" rel="stylesheet">
 </head>
 <body class="white-bg-color">
+
+    {# Facebook JavaScript SDK #}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0"></script>
+    
     {% include 'components/header.html' %}
 
     {% block container %}

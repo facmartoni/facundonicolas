@@ -11,7 +11,7 @@ header {
   /* transition: 0.3s; */
 }
 
-.header__logo:hover {
+.header__logo-link:hover .header__logo {
   transform: scale(0.9);
 }
 

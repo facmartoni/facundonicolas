@@ -21,31 +21,48 @@
     <div class="container d-flex flex-column align-items-center">
 
         <article class="d-flex flex-column align-items-center">
-            <div class="row text-center mt-5 mb-3 px-2">
-                <h2>{{ post.title }}</h2>       
+            <div class="row text-center mt-5 mt-lg-6 mb-3 px-2">
+                <h2 class="post_title">{{ post.title }}</h2>       
             </div>
 
-            <div class="row text-center mb-5">
+            <div class="row text-center mb-5 mb-md-6 mb-lg-6">
                 <small>Publicado el {{ post.pub_date|date:'d/m/Y' }}</small>
             </div>
 
-            <div class="row text-center mb-5 px-4">
-                <p>{{ post.summary }}</p>
+            <div class="row text-center mb-5 mb-md-6 mb-lg-6 px-4">
+                <p class="post_summary">{{ post.summary }}</p>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-5 mb-md-6 mb-lg-6">
                 <div class="separator"></div>
             </div>
 
-            <div class="row px-4 mb-5">
+            <div class="row px-4 mb-5 mb-md-6 mb-lg-6 d-lg-none">
                 {{ post.body | markdown:"trusted" }}
             </div>
 
-            <div class="row px-2 mb-5 d-flex justify-content-start w-100">
-                {% for tag in post.tags.all %}
-                    {% include 'components/tag.html' with name=tag.name url=tag.get_absolute_url %}
-                {% endfor %}
-            </div>        
+            {# When the screen is up to 992px, the article body visualization changes #}
+            <div class="d-none d-lg-flex justify-content-center">
+                <div class="row px-4 mb-5 mb-md-6 d-none d-lg-block">
+                    {{ post.body | markdown:"trusted" }}
+                </div>
+
+                <div class="row mb-5 ml-5 d-none d-lg-flex flex-column align-items-center">
+                    <h3 class="mb-2">Más Leídos</h3>
+                    <div class="mini_separator mb-4"></div>
+                    <div class="most_viewed_posts_container d-flex flex-column align-items-center text-center">
+                        {% for post in most_viewed_posts %}
+                            <small class="mb-2">{{ forloop.counter }}. <a class="most_viewed_post" href={{ post.get_absolute_url }}>{{ post.title }}</a></small>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+                <div class="row px-2 mb-5 mb-md-6 mb-lg-6 d-flex justify-content-start w-100">
+                    {% for tag in post.tags.all %}
+                        {% include 'components/tag.html' with name=tag.name url=tag.get_absolute_url %}
+                    {% endfor %}
+                </div>        
         </article>
 
 
@@ -61,7 +78,7 @@
             <div class="separator"></div>
         </div>
 
-        <div class="row mb-5 d-flex flex-column align-items-center">
+        <div class="row mb-5 d-flex flex-column align-items-center d-lg-none">
             <h3 class="mb-2">Más Leídos</h3>
             <div class="mini_separator mb-4"></div>
             <div class="most_viewed_posts_container d-flex flex-column align-items-center text-center">
@@ -71,15 +88,25 @@
             </div>
         </div>
 
-        <div class="row mb-5">
+        <div class="row mb-5 d-lg-none">
             <div class="separator"></div>
+        </div>
+
+        <div class="row mb-5">
+            <h2>¡Déjame un comentario!</h2>
         </div>
 
     </div>
 
-    {% comment %} {{"<small>Hola! **Esto** es iCarly</small>" | markdown:"trusted"}}
-    <h1>
-        {{test | markdown:"trusted" }}
-    </h1>
-    <p>Hola! Esto es tutu</p> {% endcomment %}
+    <div class="container-fluid">
+        <figure class="bitmoji-looking m-0 ml-n4">
+            <img class="w-100" src="{% static 'img/bitmojis/looking.png' %}" alt="Looking bitmoji">
+        </figure>
+        <div 
+            class="fb-comments" 
+            data-href="{{ post.get_absolute_url }}"
+        >
+        </div>
+    </div>          
+
 {% endblock container %}
