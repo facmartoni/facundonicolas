@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='subscriber',
             name='created',
-            field=models.DateTimeField(auto_now_add=True, default=''),
+            field=models.DateTimeField(auto_now_add=True, default=None),
             preserve_default=False,
         ),
     ]
