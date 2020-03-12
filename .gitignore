@@ -15,6 +15,7 @@ app/media/
 
 app/venv/
 settings_prod.py
+manage.py
 
 # Cache
 
