@@ -6,7 +6,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     cover = models.ImageField(
-        upload_to="posts/covers",
+        upload_to="static/posts/covers",
         null=True,
         verbose_name='Cover'
     )
