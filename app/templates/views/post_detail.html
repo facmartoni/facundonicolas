@@ -100,11 +100,11 @@
 
     <div class="container-fluid">
         <figure class="bitmoji-looking m-0 ml-n4">
-            <img class="w-100" src="{{ domain }}{% static 'img/bitmojis/looking.png' %}" alt="Looking bitmoji">
+            <img class="w-100" src="{% static 'img/bitmojis/looking.png' %}" alt="Looking bitmoji">
         </figure>
         <div 
             class="fb-comments" 
-            data-href="{{ post.get_absolute_url }}"
+            data-href="{{ domain }}{{ post.get_absolute_url }}"
         >
         </div>
     </div>          
