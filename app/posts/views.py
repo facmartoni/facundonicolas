@@ -130,7 +130,7 @@ def post_detail(request, slug):
     most_viewed_posts = Post.objects.all().order_by('-views')[:5]
     context['most_viewed_posts'] = most_viewed_posts
 
-    domain = getattr(settings, DOMAIN)
+    domain = getattr(settings, 'DOMAIN')
     context['domain'] = domain
 
     # Only for debug
