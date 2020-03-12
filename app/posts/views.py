@@ -9,6 +9,7 @@ from datetime import datetime
 
 from django.views.generic import ListView, TemplateView
 from django.shortcuts import render, redirect
+from django.conf import settings
 
 # Third Party
 
@@ -128,6 +129,9 @@ def post_detail(request, slug):
 
     most_viewed_posts = Post.objects.all().order_by('-views')[:5]
     context['most_viewed_posts'] = most_viewed_posts
+
+    domain = settings.DOMAIN
+    context['domain'] = domain
 
     # Only for debug
     # test = 'Hola! **Esto** es una *prueba* de [markdown 😎](http://daringfireball.net/projects/markdown/)'
