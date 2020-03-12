@@ -1,0 +1,15 @@
+asgiref==3.2.3
+autopep8==1.4.4
+beautifulsoup4==4.8.2
+Django==3.0.1
+django-bootstrap4==1.1.1
+django-ipware==2.1.0
+django-markdown-deux==1.0.5
+markdown2==2.3.8
+Pillow==6.2.1
+pycodestyle==2.5.0
+pytz==2019.3
+six==1.13.0
+soupsieve==1.9.5
+sqlparse==0.3.0
+tornado==6.0.3
