@@ -97,6 +97,9 @@ def confirmation_view(request):
 
 
 def post_detail(request, slug):
+    
+    if not Post.objects.filter(slug=slug).exists():
+        return redirect('nothing_404')
 
     context = {}
 

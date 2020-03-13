@@ -27,4 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('posts.urls', 'posts'), namespace="posts")),
     path('wip', main_views.wip, name='wip'),
+    path('404', main_views.not_found, name='nothing_404'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + [re_path(r'^.*$', main_views.not_found, name='not_found')]
