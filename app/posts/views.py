@@ -23,6 +23,8 @@ from posts.models import Subscriber, Post
 """The number of registers allowed per IP"""
 NUMBER_OF_IPS_ALLOWED = 20
 
+"""Domain name"""
+DOMAIN = 'https://facundonicolas.com'
 
 def home_view(request):
 
@@ -130,8 +132,8 @@ def post_detail(request, slug):
     most_viewed_posts = Post.objects.all().order_by('-views')[:5]
     context['most_viewed_posts'] = most_viewed_posts
 
-    domain = getattr(settings, 'DOMAIN')
-    context['domain'] = domain
+    # domain = getattr(settings, 'DOMAIN')
+    context['domain'] = DOMAIN
 
     # Only for debug
     # test = 'Hola! **Esto** es una *prueba* de [markdown 😎](http://daringfireball.net/projects/markdown/)'

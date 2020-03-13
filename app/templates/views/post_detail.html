@@ -98,15 +98,16 @@
 
     </div>
 
-    <div class="container-fluid">
-        <figure class="bitmoji-looking m-0 ml-n4">
+    <div class="container-fluid d-flex flex-column p-0">
+	<div class="row w-100 d-flex justify-content-center align-self-center px-2 my-5">
+            <div 
+               class="fb-comments" 
+	       data-href="{{ domain }}{{ post.get_absolute_url }}"
+	    ></div>
+        </div>
+        <figure class="bitmoji-looking m-0 ml-n3">
             <img class="w-100" src="{% static 'img/bitmojis/looking.png' %}" alt="Looking bitmoji">
         </figure>
-        <div 
-            class="fb-comments" 
-	    data-href="{{ domain }}{{ post.get_absolute_url }}"
-        >
-        </div>
     </div>          
 
 {% endblock container %}
