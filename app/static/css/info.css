@@ -1,0 +1,14 @@
+.info__container {
+  min-height: calc(100vh - 600px);
+  height: auto;
+}
+
+.info__bitmoji {
+  width: 256px;
+}
+
+@media screen and (min-width: 768px) {
+  .info__bitmoji {
+    width: 320px;
+  }
+}

@@ -1,0 +1,17 @@
+.tag {
+  width: 128px;
+  height: 36px;
+  color: var(--light-text-color);
+  text-transform: uppercase;
+  margin-right: 16px;
+  transition: ease-out 0.4s;
+}
+
+.tag:last-child {
+  margin-right: 0;
+}
+
+.tag:hover {
+  text-decoration: none;
+  color: var(--light-text-color);
+}

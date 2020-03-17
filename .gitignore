@@ -2,7 +2,9 @@
 
 assetsBORRAR/
 app/media/
-static/
+*jpg
+*png
+static/admin/
 
 # Design
 

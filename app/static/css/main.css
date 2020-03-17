@@ -1,0 +1,271 @@
+:root {
+  /* Colors */
+
+  --white-color: #f1f1f1;
+  --black-color: #000000;
+  --light-text-color: #ffffff;
+  --dark-text-color: #292a2c;
+  --action-color: #1b0357;
+  --light-action-color: #5d2fcf;
+  --positive-color: #8a7d59;
+  --negative-color: #801823;
+  --twitter-color: #00acee;
+  --instagram-color: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  --linkedin-color: #0e76a8;
+  --github-color: #333;
+}
+
+/* Font colors */
+
+.white-color {
+  color: var(--white-color) !important;
+}
+
+.black-color {
+  color: var(--black-color) !important;
+}
+
+.light-text-color {
+  color: var(--light-text-color) !important;
+}
+
+.dark-text-color {
+  color: var(--dark-text-color) !important;
+}
+
+.action-color {
+  color: var(--action-color) !important;
+}
+
+.positive-color {
+  color: var(--positive-color) !important;
+}
+
+.negative-color {
+  color: var(--negative-color) !important;
+}
+
+/* Background colors */
+
+.white-bg-color {
+  background-color: var(--white-color) !important;
+}
+
+.black-bg-color {
+  background-color: var(--black-color) !important;
+}
+
+.light-bg-text-color {
+  background-color: var(--light-text-color) !important;
+}
+
+.dark-bg-text-color {
+  background-color: var(--dark-text-color) !important;
+}
+
+.action-bg-color {
+  background-color: var(--action-color) !important;
+}
+
+.positive-bg-color {
+  background-color: var(--positive-color) !important;
+}
+
+.negative-bg-color {
+  background-color: var(--negative-color) !important;
+}
+
+/* Fonts */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+  margin: 0;
+}
+
+p,
+a,
+span,
+small {
+  font-family: "Cantarell", sans-serif;
+  margin: 0;
+}
+
+/* Font sizes */
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  /* h2 {
+    font-size: 50px;
+  } */
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* h2 {
+    font-size: 54px;
+  } */
+}
+
+/* Link color */
+
+a {
+  color: var(--light-action-color);
+}
+
+a:hover {
+  color: var(--light-action-color);
+}
+
+/* Paragraph lines separation */
+
+p {
+  line-height: 1.4;
+}
+
+/* Button */
+
+.main__button {
+  font-family: "Fjalla One", sans-serif;
+  width: 192px;
+  height: 48px;
+  text-transform: uppercase;
+  border: 2px solid var(--action-color);
+  transition: 0.3s;
+}
+
+.main__button:hover {
+  text-decoration: none;
+}
+
+/* Miscellaneus */
+
+@media screen and (min-width: 992px) {
+  .fill:hover,
+  .fill:focus {
+    box-shadow: inset 0 0 0 2em var(--white-color);
+    color: var(--black-color) !important;
+  }
+
+  .fill_action:hover,
+  .fill_action:focus {
+    box-shadow: inset 0 0 0 2em var(--action-color);
+    color: var(--white-color) !important;
+  }
+
+  .slide:hover,
+  .slide:focus {
+    box-shadow: inset 10em 0 0 0 var(--black-color);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article_preview__margin {
+    margin-left: -32px !important;
+    margin-right: -32px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .article_preview__margin {
+    margin-left: -96px !important;
+    margin-right: -96px !important;
+  }
+}
+
+/* Bootstrap additions */
+
+@media screen and (min-width: 768px) {
+  .mb-md-6 {
+    margin-bottom: 64px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mt-lg-6 {
+    margin-top: 96px !important;
+  }
+
+  .mb-lg-6 {
+    margin-bottom: 94px !important;
+  }
+}
+
+/* Iphone input bug 👇🏼 */
+
+input {
+  border-radius: 0px !important;
+}
